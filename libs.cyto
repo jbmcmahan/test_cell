@@ -1,0 +1,93 @@
+/* Copyright (c) 2016, Molecula Maxima All rights reserved.
+     
+  Distributed under the Boost Software License, Version 1.0 (See license at http://www.boost.org/LICENSE_1_0.txt).
+ 
+ 
+  "Computer programming is an art, because it applies accumulated knowledge to the world, 
+   because it requires skill and ingenuity, and especially because it produces objects of beauty." Donald Ervin Knuth
+ 
+
+   "You have to trust that the dots will somehow connect in your future, because believing that the 
+    dots will connect down the road will give you the confidence to follow your heart" Steve Jobs
+ 
+ 
+    "A man provided with paper, pencil, and rubber, and subject to strict discipline, 
+     is in effect a universal machine." Alan Turing
+     
+ */
+
+
+lib (promoter)
+{
+	category('Molecula Maxima')
+	{
+		category('E.coli promoters')
+		{
+		
+			// A constitutive promoter is one that is not regulated by any transcription factors. 
+			// The activity of such a promoter may be affected by the levels of RNA Polymerase or particular sigma factors.
+			
+			category('constitutive')
+			{
+				category('sigma 70')
+				{
+					(~) e_coli_constitutive_s70_promoter_1  <-  ['BBa_J23100'];  // constitutive promoter family member (406 uses)			
+					(~) e_coli_constitutive_s70_promoter_2  <-  ['BBa_J23101'];  // constitutive promoter family member (215 uses)
+					(~) e_coli_constitutive_s70_promoter_3  <-  ['BBa_J23106'];  // constitutive promoter family member (143 uses)
+					(~) e_coli_constitutive_s70_promoter_4  <-  ['BBa_J23110'];  // constitutive promoter family member (92 uses)
+				}
+			}
+		}
+	}	
+}
+
+
+
+
+
+lib (rbs)
+{
+	category('Molecula Maxima')
+	{
+		category('E.coli')
+		{
+			(~) strong_rbs  <-  ['BBa_B0030'];  // strong rbs (734 uses), modified from R. Weiss
+			(~) medium_rbs  <-  ['BBa_B0032'];  // medium rbs (606 uses), derivative of BBa_0030
+			(~) weak_rbs    <-  ['BBa_B0031'];  // weak rbs (200 uses), derivative of BBa_0030	
+			(~) weaker_rbs  <-  ['BBa_B0033'];  // weaker rbs (121 uses), derivative of BBa_0030	
+		}
+	}
+}
+
+
+
+
+
+lib (cds)
+{
+	category('Molecula Maxima')
+	{
+		(~) rfp  <-  ['BBa_E1010'];    // **Highly** engineered mutant of red fluorescent protein from Discosoma striata (coral) (360 uses)
+		(~) cfp  <-  ['BBa_E0020'];    // Engineered cyan fluorescent protein derived from A. victoria GFP (79 uses)
+		(~) yfp  <-  ['BBa_E0030'];    // Enhanced yellow fluorescent protein derived from A. victoria GFP (128 uses)		
+		(~) gfp  <-  ['BBa_E0040'];    // Green fluorescent protein derived from jellyfish Aequeora victoria wild-type GFP (SwissProt: P42212) (593 uses)
+		(~) ofp  <-  ['BBa_E2050'];    // derivative of mRFP1, yeast-optimized (13 uses)
+		(~) bfp  <-  ['BBa_K592100'];  // Blue Fluorescent Protein (mTagBFP) (24 uses)
+	}
+}
+
+
+
+
+
+lib (terminator)
+{
+	category('Molecula Maxima')
+	{
+		category('E.coli')
+		{
+			(~) double_terminator                <- ['BBa_B0015']; // double terminator (3210 uses), consisting of BBa_B0010 and BBa_B0012.
+			(~) double_bidirectional_terminator  <- ['BBa_B0014']; // double bidirectional terminator (266 uses), consisting of BBa_B0012 and BBa_B0011.
+		}
+	}
+}
