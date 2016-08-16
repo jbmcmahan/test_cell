@@ -1,0 +1,19 @@
+
+
+(~) mRFP1 <- ['BBa_E1010'];
+(~) GFPmut3b           <- ['BBa_E0040'];       
+(~) uv_promoter        <- ['BBa_I765001'];     
+(~) lacI_repressor     <- ['BBa_C0012'];  
+(~) double_terminator  <- ['BBa_B0015'];   
+(~) strong_rbs         <- ['BBa_B0030'];   
+(~) lacI_promoter      <- ['BBa_R0010'];
+
+(~) uv_regulated_lacI_and_rfp_exp  <- +promoter{[uv_promoter]} rbs{[strong_rbs]} cds{[lacI_repressor]} dna{att att} cds{[mRFP1]} terminator{[double_terminator]};
+	
+(~) lacI_negatively_regulated_gfp_exp <- -promoter{ [lacI_promoter]} rbs{[strong_rbs]}  cds{[GFPmut3b]} terminator{[double_terminator]};
+
+(~) uv_detector_insert <- [uv_regulated_lacI_and_rfp_exp] [lacI_negatively_regulated_gfp_exp];
+
+(o) uv_detector_plasmid <- ['pSB1C3'] ;
+
+uv_detector_plasmid u [uv_detector_insert]; 
